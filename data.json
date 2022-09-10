@@ -1,0 +1,67 @@
+[
+    {
+        "security_id": "BBG00NRVY370",
+        "cusip": "A0400Q115",
+        "sedol": "BPH3KB7",
+        "isin": "AT0000A18XM4",
+        "ric": "0QWC.L",
+        "bloomberg": "8821874",
+        "bbg": "BBG00NRVY370",
+        "symbol": "0QWC LI",
+        "root_symbol": "0QWC",
+        "bb_yellow": "0QWC LN Equity",
+        "spn": "1"
+    },
+    {
+        "security_id": "BBG00NRVXYL7",
+        "cusip": "H8300N119",
+        "sedol": "BKJ8Y35",
+        "isin": "CH0012280076",
+        "ric": "0QMV.L",
+        "bloomberg": "328110",
+        "bbg": "BBG00NRVXYL7",
+        "symbol": "0QMV LI",
+        "root_symbol": "0QMV",
+        "bb_yellow": "0QMV LN Equity",
+        "spn": "2"
+    },
+    {
+        "security_id": "BBG00NRVY192",
+        "cusip": "H2878E106",
+        "sedol": "BKJ90H4",
+        "isin": "CH0102659627",
+        "ric": "0QN3.L",
+        "bloomberg": "116653",
+        "bbg": "BBG00NRVY192",
+        "symbol": "0QN3 LI",
+        "root_symbol": "0QN3",
+        "bb_yellow": "0QN3 LN Equity",
+        "spn": "3"
+    },
+    {
+        "security_id": "BBG00NRVXWR5",
+        "cusip": "H8398N104",
+        "sedol": "B11JQ82",
+        "isin": "CH0008742519",
+        "ric": "0QKI.L",
+        "bloomberg": "221709",
+        "bbg": "BBG00NRVXWR5",
+        "symbol": "0QKI LI",
+        "root_symbol": "0QKI",
+        "bb_yellow": "0QKI LN Equity",
+        "spn": "4"
+    },
+    {
+        "security_id": "BBG00JHW70R2",
+        "cusip": "W5303A147",
+        "sedol": "BN71XC9",
+        "isin": "SE0014990966",
+        "ric": "0RB7.L",
+        "bloomberg": "7326215",
+        "bbg": "BBG00JHW70R2",
+        "symbol": "0RB7 LI",
+        "root_symbol": "0RB7",
+        "bb_yellow": "0RB7 LN Equity\t",
+        "spn": "5"
+    }
+]
