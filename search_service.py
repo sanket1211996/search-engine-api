@@ -26,5 +26,5 @@ class SearchService:
         print('Search String' + search_text)
         jsonArray = self.csv_to_json('data.csv')
         if search_text == '1':
-            return jsonArray[0]
+            return [jsonArray[0]]
         return jsonArray
