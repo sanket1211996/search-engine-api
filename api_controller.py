@@ -3,6 +3,9 @@ from fastapi import FastAPI
 from fastapi.middleware import Middleware
 from fastapi.middleware.cors import CORSMiddleware
 import search_service
+import pandas as pd
+from starlette.requests import Request
+from starlette.responses import Response
 
 app = FastAPI()
 
@@ -19,14 +22,15 @@ middleware = [Middleware(
 app = FastAPI(middleware=middleware)
 
 
-# async def catch_exceptions_middleware(request: Request, call_next):
-#     try:
-#         return await call_next(request)
-#     except Exception:
-#         return Response("Internal server error", status_code=505)
+async def catch_exceptions_middleware(request: Request, call_next):
+    try:
+        return await call_next(request)
+    except Exception:
+        print('Error: My Original Internal server error')
+        return Response("My Original Internal server error", status_code=505)
 
 
-# app.middleware('http')(catch_exceptions_middleware)
+app.middleware('http')(catch_exceptions_middleware)
 
 
 @app.get("/apiv1/search-api")
@@ -43,4 +47,22 @@ def setup():
 
 
 if __name__ == '__main__':
+    from os.path import exists
+
+    file_exists = exists('./data/mini_pickle')
+    if not file_exists:
+        print('Making pickle')
+        file_exists = exists('./data/mini.csv')
+        if file_exists:
+            print('CSV File found')
+            df = pd.read_csv('./data/mini.csv', dtype=str)
+            df.fillna("_", inplace=True)
+            df['text'] = df['security_id'] + ' ' + df['cusip'] + ' ' + df['sedol'] + ' ' + df['isin'] + ' ' + df['ric'] + ' ' + \
+                         df['bloomberg'] + ' ' + df['bbg'] + ' ' + df['symbol'] + ' ' + df['root_symbol'] + ' ' + df[
+                             'bb_yellow'] + ' ' + df['spn']
+            df.to_pickle("./data/mini_pickle")
+        else:
+            print('CSV File not found')
+    else:
+        print('Pickle Present')
     setup()
