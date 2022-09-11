@@ -61,6 +61,7 @@ if __name__ == '__main__':
                          df['bloomberg'] + ' ' + df['bbg'] + ' ' + df['symbol'] + ' ' + df['root_symbol'] + ' ' + df[
                              'bb_yellow'] + ' ' + df['spn']
             df.to_pickle("./data/mini_pickle")
+            print('Pickle Ready')
         else:
             print('CSV File not found')
     else:
